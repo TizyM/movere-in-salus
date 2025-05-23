@@ -148,14 +148,15 @@
   </footer>
 
   <script>
-    function translatePage(select) {
-      const lang = select.value;
-      if (lang) {
-        const url = "https://translate.google.com/translate?hl=" + lang + "&sl=it&u=" + encodeURIComponent(window.location.href);
-        window.open(url, "_blank");
-        select.value = "";
-      }
+  function translatePage(select) {
+    const lang = select.value;
+    if (lang) {
+      const url = "https://translate.google.com/translate?hl=" + lang + "&sl=it&u=https://tizym.github.io/movere-in-salus/";
+      window.open(url, "_blank");
+      select.value = "";
     }
-  </script>
+  }
+</script>
+
 </body>
 </html>
