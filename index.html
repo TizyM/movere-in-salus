@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movere in Salus – Start-up per il Benessere Familiare</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f9fc;
+      color: #2a2a2a;
+    }
+    header {
+      background: linear-gradient(to right, #00aaff, #004080);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+    nav {
+      text-align: right;
+      padding: 10px 20px;
+    }
+    nav select {
+      padding: 5px;
+    }
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 1.4em;
+      margin-top: 30px;
+      border-bottom: 2px solid #0077cc;
+      padding-bottom: 5px;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      .section-title {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+  <script>
+    function translatePage(lang) {
+      const url = `https://translate.google.com/translate?sl=it&tl=${lang}&u=${window.location.href}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <label for="language">🌐 Lingua:</label>
+    <select id="language" onchange="translatePage(this.value)">
+      <option value="it">Italiano</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+    </select>
+  </nav>
+
+  <header>
+    <h1>Movere in Salus</h1>
+    <p>Startup per il benessere delle famiglie con tecnologia, scienza ed educazione</p>
+  </header>
+
+  <img src="Movere%202.0%20Logo.jpg" alt="Logo Movere in Salus" style="max-width: 160px; margin: 20px auto; display: block;">
+
+  <section>
+    <h2 class="section-title">Chi siamo</h2>
+    <p><strong>Prof.ssa Tiziana Mori</strong>: CEO, Coordinatrice Scientifica, Progettista, Business Development</p>
+    <p><strong>Dr. Massimiliano Tronci</strong>: Legal & Data Compliance</p>
+    <p><strong>Dr. Roberto Diana</strong>: Stratega Nutrizione e Marketing Sanitario</p>
+    <p><strong>Dr.ssa Monica Fadda</strong>: UX Designer, Cantoterapia, Gamification</p>
+
+    <h2 class="section-title">Missione</h2>
+    <p>Movere in Salus promuove salute mentale, educazione ambientale, cittadinanza attiva, alimentazione sana e imprenditoria femminile in ambito agrifood attraverso progetti innovativi, dati spaziali, AI, musica e gioco educativo.</p>
+
+    <h2 class="section-title">Progetti principali</h2>
+    <ul>
+      <li><a href="https://tizym.github.io/COSMOpet/">COSMOpet</a>: terapia con AI e dati Copernicus</li>
+      <li>Leo EmoPet: intelligenza emotiva per bambini (in corso)</li>
+      <li>Educazione nutrizionale gamificata</li>
+    </ul>
+
+    <h2 class="section-title">Network e Valori</h2>
+    <p>Siamo parte della rete <strong>Amici della Famiglia</strong> tramite <strong>Arka Eventi Culturali</strong>, promuoviamo benessere educativo e supporto genitoriale.</p>
+
+    <h2 class="section-title">Scopri il nostro pitch Cassini</h2>
+    <p><a href="https://github.com/TizyM/movere-in-salus/blob/main/MOVERE%202.0+CosmoPet%20(Italy)%20final_Def.pitch%20ppt%20(Cassini%20hack).pdf" target="_blank">📄 Visualizza il pitch presentato all'Hackathon Cassini 2025</a></p>
+
+    <a href="mailto:movereinsalus.project@gmail.com" class="cta-button">📩 Contattaci per collaborazioni o eventi</a>
+  </section>
+
+  <footer>
+    © Tiziana Mori – Movere in Salus 2024–2025<br>
+    Tutti i contenuti sono protetti. Vietata la riproduzione senza autorizzazione scritta.<br>
+    Email: <a href="mailto:movereinsalus.project@gmail.com">movereinsalus.project@gmail.com</a>
+  </footer>
+</body>
+</html>
