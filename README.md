@@ -22,7 +22,9 @@ Migliorare la qualità della vita delle famiglie attraverso:
 
 ## 🧪 Progetti attivi
 
-- [COSMOpet](https://tizym.github.io/COSMOpet/): pet therapy gamificata e musica con dati Copernicus
+- **COSMOpet** – Pet therapy digitale con dati Copernicus per esperienze uniche: (https://tizym.github.io/COSMOpet/): pet therapy gamificata e musica con dati Copernicus
+- **ChatAllAI (ex WellAI Chatbot)** – Un chatbot AI innovativo per il benessere familiare, che offre consulenze personalizzate e suggerimenti su stili di vita sani. In gara al Future Hackathon 2025 – OutSystems, a Lisbona, il progetto è coordinato da Tiziana Mori e Massimiliano Tronci.
+- *Nuove iniziative in fase di sviluppo...*
 - Educazione ambientale e alimentare
 - Ricerca e pubblicazioni scientifiche
 - Workshop per enti, scuole e famiglie
