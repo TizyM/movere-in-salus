@@ -76,6 +76,40 @@
     .cta-button:hover {
       background-color: #0055a5;
     }
+    @media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  a {
+    color: black !important;
+    text-decoration: underline;
+  }
+
+  .cta-button,
+  header,
+  footer {
+    display: none !important;
+  }
+
+  .card {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .date {
+    float: none !important;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  main {
+    padding: 0;
+    max-width: 100%;
+  }
+
+
   </style>
 </head>
 <body>
