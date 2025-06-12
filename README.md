@@ -3,36 +3,9 @@ Landing page + communication hub for the Movere 2.0 startup project
 
 # 🌍 Movere in Salus – Startup per il Benessere Familiare
 
-**Movere in Salus** è una startup ad impatto sociale che integra tecnologia spaziale, intelligenza artificiale, arte, educazione e ricerca per promuovere salute mentale, stili di vita sani, cittadina[...]
-
-# 🏞️ MOVERE in Salus  
-**Laboratorio per politiche anti-spopolamento**  
-*Coordinatrice Scientifica: Prof.ssa Tiziana Mori*
-
-> "Progetto pilota nazionale partito dalla Sardegna per specificità territoriali - Fase diagnostica 2025"
-
-## 🔍 Valore per i Comuni
-```mermaid
-graph TD
-A[Analisi preliminare] --> B((Workshop territoriale))
-B --> C[Toolkit fase 1: Diagnosi]
-B --> D[Toolkit fase 2: Soluzioni]
+**Movere in Salus** è una startup ad impatto sociale che integra tecnologia spaziale, intelligenza artificiale, arte, educazione e ricerca per promuovere salute mentale, stili di vita sani, cittadinanza attiva e benessere delle famiglie.
 
 👉 Visita il sito ufficiale: [https://tizym.github.io/movere-in-salus/](https://tizym.github.io/movere-in-salus/)
-
-📊 Dati dimostrativi
-Accesso a dataset pilota:
-Data/dataset_demo.csv: https://github.com/TizyM/movere-in-salus/blob/main/Data/dataset_demo.csv
-(Dati completi disponibili per enti pubblici previo accordo)
-
-### 🎯 Fattori critici
-```mermaid
-pie
-    title Fattori critici in 20 comuni pilota
-    "Carenza servizi infanzia" : 42
-    "Disconnessione digitale" : 28
-    "Mobilità carente" : 19
-    "Altro" : 11
 
 ---
 
@@ -50,15 +23,49 @@ Migliorare la qualità della vita delle famiglie attraverso:
 ## 🧪 Progetti attivi
 
 - **COSMOpet** – Pet therapy digitale con dati Copernicus per esperienze uniche: (https://tizym.github.io/COSMOpet/): pet therapy gamificata e musica con dati Copernicus
-- **ChatWellAI** – Un chatbot AI innovativo per il benessere familiare, che offre consulenze personalizzate e suggerimenti su stili di vita sani. In gara al Future Hackathon 2025 – OutSystems,[...]
+- **ChatWellAI** – Un chatbot AI innovativo per il benessere familiare, che offre consulenze personalizzate e suggerimenti su stili di vita sani. In gara al Future Hackathon 2025 – OutSystems, ...
 - *Nuove iniziative in fase di sviluppo...*
 - Educazione ambientale e alimentare
 - Ricerca e pubblicazioni scientifiche
 - Workshop per enti, scuole e famiglie
 
 ---
+## Laboratorio per politiche anti-spopolamento
 
-## 🤝 Collabora con noi
+🏞️ **Progetto Anti-Spolamento**
+```mermaid
+graph TD
+    A[Analisi preliminare] --> B((Workshop territoriale))
+    B --> C[Toolkit fase 1: Diagnosi]
+    B --> D[Toolkit fase 2: Soluzioni]
+
+📊 Dati dimostrativi
+Accesso a dataset pilota:
+Data set: https://github.com/TizyM/movere-in-salus/blob/main/Data/dataset_demo.csv
+(Dati completi disponibili per enti pubblici previo accordo)
+
+---
+
+## 🌱  **AGRIMotus**   (Progetto in valutazione UE)
+**Innovazione per un sistema agroalimentare sano e sostenibile**
+
+> *Piattaforma digitale che rivoluziona il rapporto tra alimentazione, benessere e sostenibilità - in fase di approvazione per finanziamento europeo*
+
+### 🔍 Problema affrontato
+- Difficoltà dei consumatori nelle scelte alimentari sane
+- Accesso limitato al mercato per piccoli produttori locali
+- Spreco alimentare e gestione inefficace delle risorse
+
+### 💡 Soluzione innovativa
+```mermaid
+graph LR
+A[AI Nutrizionale] --> B((Marketplace Locale))
+C[Dati Satellitari] --> B
+B --> D[Scelte Consapevoli]
+B --> E[Riduzione Sprechi]
+
+---
+## 🤝 @Collabora con noi
 
 - Sei una scuola, ente locale o azienda interessata al benessere?
 - Sei uno sviluppatore, ricercatore o volontario?
@@ -68,7 +75,5 @@ Migliorare la qualità della vita delle famiglie attraverso:
 
 ---
 
-© Prof.ssa Tiziana Mori (Ph.D) – Movere in Salus -Agrimotus- 2025–2026  
+© Prof.ssa Tiziana Mori (Ph.D) – Movere in Salus 2024–2025  
 Tutti i diritti riservati.
-
-```
