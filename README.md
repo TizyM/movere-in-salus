@@ -45,7 +45,7 @@ Data set: https://github.com/TizyM/movere-in-salus/blob/main/Data/dataset_demo.c
 
 ---
 
-## 🌱  **AGRIMotus**   (Progetto in valutazione UE)
+## 🌱  **AGRIMotus**   (Progetto in valutazione UE) -a cura della Prof.ssa MORI
 **Innovazione per un sistema agroalimentare sano e sostenibile**
 
 > *Piattaforma digitale che rivoluziona il rapporto tra alimentazione, benessere e sostenibilità - in fase di approvazione per finanziamento europeo*
