@@ -4,8 +4,34 @@ Landing page + communication hub for the Movere 2.0 startup project
 # 🌍 Movere in Salus – Startup per il Benessere Familiare
 
 **Movere in Salus** è una startup ad impatto sociale che integra tecnologia spaziale, intelligenza artificiale, arte, educazione e ricerca per promuovere salute mentale, stili di vita sani, cittadinanza attiva e inclusione sociale.
+# 🏞️ MOVERE in Salus  
+**Laboratorio per politiche anti-spopolamento**  
+*Coordinatrice Scientifica: Prof.ssa Tiziana Mori*
+
+> "Progetto pilota nazionale partito dalla Sardegna per specificità territoriali - Fase diagnostica 2025"
+
+## 🔍 Valore per i Comuni
+```mermaid
+graph TD
+A[Analisi preliminare] --> B((Workshop territoriale))
+B --> C[Toolkit fase 1: Diagnosi]
+B --> D[Toolkit fase 2: Soluzioni]
 
 👉 Visita il sito ufficiale: [https://tizym.github.io/movere-in-salus/](https://tizym.github.io/movere-in-salus/)
+
+📊 Dati dimostrativi
+Accesso a dataset pilota:
+Data/dataset_demo.csv: https://github.com/TizyM/movere-in-salus/blob/main/Data/dataset_demo.csv
+(Dati completi disponibili per enti pubblici previo accordo)
+
+### 🎯 Fattori critici
+```mermaid
+pie
+    title Fattori critici in 20 comuni pilota
+    "Carenza servizi infanzia" : 42
+    "Disconnessione digitale" : 28
+    "Mobilità carente" : 19
+    "Altro" : 11
 
 ---
 
@@ -41,5 +67,5 @@ Migliorare la qualità della vita delle famiglie attraverso:
 
 ---
 
-© Prof.ssa Tiziana Mori (Ph.D) – Movere in Salus 2024–2025  
+© Prof.ssa Tiziana Mori (Ph.D) – Movere in Salus -Agrimotus- 2025–2026  
 Tutti i diritti riservati.
