@@ -33,8 +33,7 @@ Migliorare la qualità della vita delle famiglie attraverso:
 ## Laboratorio per politiche anti-spopolamento
 
 🏞️ **Progetto Anti-Spolamento**
-```mermaid
-graph TD
+
     A[Analisi preliminare] --> B((Workshop territoriale))
     B --> C[Toolkit fase 1: Diagnosi]
     B --> D[Toolkit fase 2: Soluzioni]
