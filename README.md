@@ -56,8 +56,7 @@ Data set: https://github.com/TizyM/movere-in-salus/blob/main/Data/dataset_demo.c
 - Spreco alimentare e gestione inefficace delle risorse
 
 ### 💡 Soluzione innovativa
-```mermaid
-graph LR
+
 A[AI Nutrizionale] --> B((Marketplace Locale))
 C[Dati Satellitari] --> B
 B --> D[Scelte Consapevoli]
@@ -74,5 +73,5 @@ B --> E[Riduzione Sprechi]
 
 ---
 
-© Prof.ssa Tiziana Mori (Ph.D) – Movere in Salus 2024–2025  
+© Prof.ssa Tiziana Mori (Ph.D) – Movere in Salus 2025–2026  
 Tutti i diritti riservati.
