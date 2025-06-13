@@ -1,0 +1,199 @@
+/* === STILE GENERALE === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f8ff;
+  color: #222;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  max-width: 140px;
+  display: block;
+  margin: 10px auto;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #0055a5;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.cta-button:hover {
+  background-color: #0074d9;
+}
+
+footer {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 2px solid #ccc;
+}
+
+/* === PULSANTE "TORNA SU" === */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #0055a5;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+#scrollTopBtn:hover {
+  background-color: #0074d9;
+}
+
+/* === MEDIA QUERIES === */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* === AGRIMOTUS BOX === */
+.project-section {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px 0;
+  border-left: 4px solid #2ecc71;
+}
+
+.project-header h2 {
+  color: #27ae60;
+  margin-bottom: 5px;
+}
+
+.project-status {
+  font-size: 0.8em;
+  background: #eafaf1;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #27ae60;
+}
+
+.project-subtitle {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.project-lead {
+  font-style: italic;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.project-details h3 {
+  color: #16a085;
+  margin-top: 20px;
+}
+
+.solution-diagram {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.solution-node {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 10px;
+  min-width: 120px;
+}
+
+.solution-node.highlight {
+  background: #eafaf1;
+  border-color: #27ae60;
+  font-weight: 600;
+}
+
+.solution-arrow {
+  font-size: 1.5em;
+  color: #7f8c8d;
+  margin: 0 5px;
+}
+
+.solution-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.satellite-data {
+  position: absolute;
+  top: -25px;
+  right: 30%;
+  background: #e1f5fe;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #0288d1;
+}
+
+.project-contact {
+  margin-top: 25px;
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px dashed #ddd;
+}
