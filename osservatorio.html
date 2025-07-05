@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progetto Pilota Longevità Attiva | Osservatorio Movere in Salus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2e7d32;
+      --secondary: #006064;
+      --accent: #f57f17;
+      --light: #f1f8e9;
+      --dark: #1b5e20;
+      --darker: #0d3c13;
+      --transition: all 0.4s ease;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+      position: relative;
+      background-image: linear-gradient(to bottom, #f8f9fa 0%, #e8f5e9 100%);
+    }
+    
+    /* Header scientifico */
+    header {
+      background: linear-gradient(135deg, var(--darker), var(--secondary));
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 4px solid var(--accent);
+    }
+    
+    .header-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255,255,255,0.05) 0%, transparent 20%);
+      pointer-events: none;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .logo {
+      width: 90px;
+      height: 90px;
+      background: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 2.5rem;
+      color: var(--dark);
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border: 2px solid var(--accent);
+    }
+    
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 2.8rem;
+      margin-bottom: 0.8rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      letter-spacing: -0.5px;
+    }
+    
+    .subtitle {
+      font-size: 1.3rem;
+      opacity: 0.92;
+      max-width: 800px;
+      margin: 0 auto 1.5rem;
+      font-weight: 300;
+    }
+    
+    .badge-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .badge {
+      background: rgba(255,255,255,0.15);
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    /* Barra di navigazione */
+    .navbar {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      margin-top: 1.5rem;
+      border-radius: 50px;
+    }
+    
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      transition: var(--transition);
+    }
+    
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    
+    /* Introduzione scientifica */
+    .intro {
+      background: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .intro-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .intro p {
+      margin: 0 auto 1.8rem;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+    
+    .claim {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      color: var(--secondary);
+      border-left: 5px solid var(--accent);
+      padding: 1.5rem;
+      margin: 3rem auto;
+      max-width: 800px;
+      background: rgba(245, 127, 23, 0.05);
+      border-radius: 0 8px 8px 0;
+      position: relative;
+      text-align: left;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    
+    .claim::before {
+      content: """;
+      position: absolute;
+      top: -20px;
+      left: 10px;
+      font-size: 5rem;
+      color: rgba(245, 127, 23, 0.1);
+      font-family: 'Merriweather', serif;
+    }
+    
+    .pilot-highlight {
+      background: rgba(46, 125, 50, 0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+      border-left: 4px solid var(--accent);
+    }
+    
+    /* Contenitore principale */
+    .container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    
+    /* Titoli delle sezioni */
+    .section-title {
+      text-align: center;
+      margin: 4rem 0 3rem;
+      color: var(--darker);
+      position: relative;
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+    }
+    
+    .section-title:after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 5px;
+      background: var(--accent);
+      margin: 1rem auto;
+      border-radius: 3px;
+    }
+    
+    .section-subtitle {
+      text-align: center;
+      max-width: 800px;
+      margin: -1.5rem auto 3rem;
+      color: var(--secondary);
+      font-size: 1.1rem;
+    }
+    
+    /* Card scientifiche */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+      margin: 3rem 0;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: var(--transition);
+      position: relative;
+      border-top: 5px solid var(--primary);
+      transform: translateY(0);
+    }
+    
+    .card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .card-header {
+      background: var(--primary);
+      color: white;
+      padding: 1.8rem;
+      position: relative;
+    }
+    
+    .card-icon {
+      position: absolute;
+      top: -25px;
+      right: 25px;
+      background: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.8rem;
+      color: var(--primary);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border: 2px solid var(--accent);
+    }
+    
+    .card-body {
+      padding: 2rem;
+    }
+    
+    .card-title {
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+      color: var(--darker);
+      font-family: 'Merriweather', serif;
+    }
+    
+    .card-content {
+      margin-bottom: 1.8rem;
+      color: #444;
+      line-height: 1.7;
+    }
+    
+    .card-content ul {
+      padding-left: 1.5rem;
+    }
+    
+    .card-content li {
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .card-content li::before {
+      content: "▹";
+      color: var(--accent);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    .card-footer {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .card-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-right: 0.5rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    
+    /* Timeline */
+    .timeline-section {
+      background: white;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      margin: 4rem 0;
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 3rem auto;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--primary);
+      left: 50%;
+      margin-left: -2px;
+    }
+    
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 1.5rem;
+      box-sizing: border-box;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      padding-right: 3rem;
+      text-align: right;
+    }
+    
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      padding-left: 3rem;
+    }
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: var(--accent);
+      border: 4px solid white;
+      border-radius: 50%;
+      top: 2rem;
+    }
+    
+    .timeline-item:nth-child(odd)::after {
+      right: -12px;
+    }
+    
+    .timeline-item:nth-child(even)::after {
+      left: -12px;
+    }
+    
+    .timeline-date {
+      font-weight: bold;
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .timeline-content {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+    
+    /* Sezione contatti */
+    .contact-section {
+      background: white;
+      padding: 4rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      margin: 4rem 0;
+      text-align: center;
+      max-width: 800px;
+      margin: 4rem auto;
+    }
+    
+    .contact-card {
+      background: var(--light);
+      padding: 2.5rem;
+      border-radius: 12px;
+      text-align: center;
+      position: relative;
+      border: 1px solid rgba(46, 125, 50, 0.2);
+    }
+    
+    .contact-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--darker);
+      font-family: 'Merriweather', serif;
+    }
+    
+    .contact-info {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+    
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1.1rem;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+    }
+    
+    .collaboration-types {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .collab-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      width: 200px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      border: 1px solid var(--light);
+      transition: var(--transition);
+    }
+    
+    .collab-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+    
+    .collab-icon {
+      font-size: 2.5rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+    
+    /* Footer */
+    .footer {
+      background: linear-gradient(to bottom, var(--darker), var(--secondary));
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    
+    .footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+    }
+    
+    .footer-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .footer h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-family: 'Merriweather', serif;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .footer a {
+      color: var(--light);
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0.8rem 1.5rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50px;
+      font-weight: 500;
+    }
+    
+    .footer a:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      margin-top: 3rem;
+      opacity: 0.8;
+      font-size: 0.95rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+    }
+    
+    .disclaimer {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+    
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 1.8rem;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: var(--transition);
+      z-index: 100;
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .back-to-top:hover {
+      background: var(--primary);
+      transform: translateY(-5px);
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .cards-container {
+        grid-template-columns: 1fr;
+      }
+      
+      h1 {
+        font-size: 2.4rem;
+      }
+      
+      .intro {
+        padding: 3rem 1.5rem;
+      }
+      
+      .contact-section {
+        padding: 2rem;
+      }
+      
+      .timeline::before {
+        left: 2rem;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 5rem;
+        padding-right: 2rem;
+        text-align: left;
+      }
+      
+      .timeline-item:nth-child(odd) {
+        left: 0;
+        padding-right: 2rem;
+        text-align: left;
+      }
+      
+      .timeline-item:nth-child(odd)::after,
+      .timeline-item:nth-child(even)::after {
+        left: 1.5rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .logo {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+      }
+      
+      .claim {
+        font-size: 1.3rem;
+        padding: 1.2rem;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .footer a {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .nav-links {
+        flex-wrap: wrap;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .section-title {
+        font-size: 1.6rem;
+      }
+      
+      .card-body {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="header-pattern"></div>
+    <div class="logo-container">
+      <div class="logo">OLA</div>
+      <div class="header-content">
+        <h1>Osservatorio Longevità Attiva - Progetto Pilota</h1>
+        <p class="subtitle">Trasmissione intergenerazionale dei mestieri tradizionali e sviluppo di percorsi esperienziali</p>
+        
+        <div class="badge-container">
+          <div class="badge"><i class="fas fa-hands-helping"></i> Progetto Pilota</div>
+          <div class="badge"><i class="fas fa-map-marked-alt"></i> Comunità Locali</div>
+          <div class="badge"><i class="fas fa-handshake"></i> Collaborazione Aperta</div>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#progetto"><i class="fas fa-project-diagram"></i> Il Progetto</a></li>
+        <li><a href="#mestieri"><i class="fas fa-tools"></i> Mestieri Tradizionali</a></li>
+        <li><a href="#timeline"><i class="fas fa-calendar-alt"></i> Fasi di Sviluppo</a></li>
+        <li><a href="#collabora"><i class="fas fa-handshake"></i> Collabora con Noi</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Introduzione -->
+  <div class="intro">
+    <div class="intro-content">
+      <p>L'Osservatorio sulla Longevità Attiva, coordinato dalla <strong>Prof.ssa Tiziana Mori</strong>, rappresenta un progetto pilota di ricerca-azione che mira a valorizzare il patrimonio di conoscenze artigianali degli anziani attraverso percorsi di trasmissione intergenerazionale.</p>
+      
+      <p class="claim">"Gli anziani sono i custodi viventi di saperi tradizionali che rischiano di scomparire. Il nostro progetto crea ponti tra generazioni, trasformando botteghe artigiane in aule didattiche e conoscenze ancestrali in esperienze formative."</p>
+      
+      <div class="pilot-highlight">
+        <p><i class="fas fa-info-circle"></i> <strong>Progetto in fase pilota:</strong> Avviato a dicembre 2024, coinvolgiamo 50 gruppi di anziani in Sardegna e Toscana per identificare i mestieri tradizionali da preservare e valorizzare. I dati preliminari mostrano un potenziale significativo per lo sviluppo di laboratori didattici e visite guidate.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <!-- Il Progetto -->
+    <h2 class="section-title" id="progetto">Il Progetto Pilota</h2>
+    <p class="section-subtitle">Un'iniziativa di ricerca-azione per la valorizzazione dei mestieri tradizionali</p>
+    
+    <div class="cards-container">
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="card-header">
+          <h3 class="card-title">Selezione degli Anziani-Tutor</h3>
+        </div>
+        <div class="card-body">
+          <div class="card-content">
+            <p>Attraverso un rigoroso processo di selezione, stiamo identificando anziani custodi di mestieri tradizionali con:</p>
+            <ul>
+              <li>Competenze certificate in artigianato locale</li>
+              <li>Capacità comunicative e didattiche</li>
+              <li>Disponibilità a trasmettere il proprio sapere</li>
+              <li>Radicamento nel territorio e nella comunità</li>
+            </ul>
+            <p>I criteri di selezione sono stati sviluppati in collaborazione con antropologi culturali e esperti di patrimonio immateriale UNESCO.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-badge"><i class="fas fa-user-check"></i> 50 gruppi selezionati</span>
+            <span class="card-badge"><i class="fas fa-map-marker-alt"></i> Sardegna e Toscana</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-hands"></i>
+        </div>
+        <div class="card-header">
+          <h3 class="card-title">Mappatura dei Mestieri</h3>
+        </div>
+        <div class="card-body">
+          <div class="card-content">
+            <p>Stiamo catalogando sistematicamente i mestieri tradizionali emergenti dai gruppi coinvolti:</p>
+            <ul>
+              <li>Tessitura tradizionale e lavorazione del lino</li>
+              <li>Lavorazione del legno e intaglio</li>
+              <li>Produzione di cesti in vimini e giunco</li>
+              <li>Lavorazione della ceramica e terracotta</li>
+              <li>Produzione di formaggi e salumi tradizionali</li>
+              <li>Viticoltura e produzione vinicola artigianale</li>
+            </ul>
+            <p>Ogni mestiere viene documentato con schede tecniche, processi produttivi e valore culturale.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-badge"><i class="fas fa-book"></i> 12 categorie identificate</span>
+            <span class="card-badge"><i class="fas fa-archive"></i> Archivio digitale</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+        <div class="card-header">
+          <h3 class="card-title">Progettazione Didattica</h3>
+        </div>
+        <div class="card-body">
+          <div class="card-content">
+            <p>Stiamo sviluppando modelli didattici innovativi per la trasmissione dei saperi:</p>
+            <ul>
+              <li>Laboratori pratici per diverse fasce d'età</li>
+              <li>Percorsi esperienziali per scuole e turisti</li>
+              <li>Materiali didattici multimediali</li>
+              <li>Moduli formativi per tutor anziani</li>
+              <li>Kit didattici per la continuità generazionale</li>
+            </ul>
+            <p>I modelli si basano su approcci pedagogici sperimentali per l'apprendimento intergenerazionale.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-badge"><i class="fas fa-lightbulb"></i> Metodologia originale</span>
+            <span class="card-badge"><i class="fas fa-copyright"></i> Diritti protetti</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Timeline Aggiornata -->
+    <h2 class="section-title" id="timeline">Cronoprogramma di Sviluppo</h2>
+    <p class="section-subtitle">Le fasi del nostro progetto pilota (Dicembre 2024 - Dicembre 2025)</p>
+    
+    <div class="timeline-section">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">Dicembre 2024 - Febbraio 2025</div>
+          <div class="timeline-content">
+            <h4><i class="fas fa-search"></i> Fase Esplorativa</h4>
+            <p>Identificazione comunità e mappatura iniziale dei mestieri tradizionali in Sardegna e Toscana</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">Marzo - Maggio 2025</div>
+          <div class="timeline-content">
+            <h4><i class="fas fa-handshake"></i> Coinvolgimento Attori</h4>
+            <p>Selezione anziani-tutor e prime attività di co-progettazione con comunità locali</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">Giugno - Agosto 2025</div>
+          <div class="timeline-content">
+            <h4><i class="fas fa-tools"></i> Sviluppo Modelli</h4>
+            <p>Progettazione laboratori didattici e percorsi esperienziali</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">Settembre - Ottobre 2025</div>
+          <div class="timeline-content">
+            <h4><i class="fas fa-map-marked-alt"></i> Ricerca Location</h4>
+            <p>Identificazione e attrezzatura spazi per attività didattiche</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">Novembre - Dicembre 2025</div>
+          <div class="timeline-content">
+            <h4><i class="fas fa-euro-sign"></i> Ricerca Finanziamenti</h4>
+            <p>Sviluppo partnership e ricerca fondi per implementazione</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Collabora con noi -->
+    <h2 class="section-title" id="collabora">Collabora con il Nostro Progetto</h2>
+    <p class="section-subtitle">Unisciti a noi per valorizzare il patrimonio dei mestieri tradizionali</p>
+    
+    <div class="contact-section">
+      <div class="contact-card">
+        <h3 class="contact-title">Prof.ssa Tiziana Mori</h3>
+        <p class="contact-info">Coordinatrice Scientifica del Progetto</p>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>t.mori@protonmail.com</div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>+39 347 123 4567</div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div>movereinsalus.it</div>
+          </div>
+        </div>
+        
+        <p>Contattami per discutere opportunità di collaborazione, finanziamento o partecipazione al progetto.</p>
+        
+        <div class="collaboration-types">
+          <div class="collab-card">
+            <div class="collab-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div>Istituzioni</div>
+          </div>
+          
+          <div class="collab-card">
+            <div class="collab-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div>Finanziatori</div>
+          </div>
+          
+          <div class="collab-card">
+            <div class="collab-icon">
+              <i class="fas fa-school"></i>
+            </div>
+            <div>Scuole</div>
+          </div>
+          
+          <div class="collab-card">
+            <div class="collab-icon">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <div>Comunità Locali</div>
+          </div>
+          
+          <div class="collab-card">
+            <div class="collab-icon">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <div>Associazioni</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>Partecipa alla Valorizzazione dei Saperi Tradizionali</h2>
+      
+      <div class="footer-links">
+        <a href="mailto:t.mori@protonmail.com"><i class="fas fa-envelope"></i> Contatta la Coordinatrice</a>
+        <a href="#"><i class="fas fa-file-download"></i> Scarica la Presentazione</a>
+        <a href="#"><i class="fas fa-handshake"></i> Richiedi Partnership</a>
+      </div>
+      
+      <div class="copyright">
+        <p>© 2024 Osservatorio Longevità Attiva | Coordinatrice Scientifica: Prof.ssa Tiziana Mori</p>
+        <p>Tutti i contenuti, modelli e metodologie presenti su questa pagina sono protetti da copyright. È vietata la riproduzione senza autorizzazione scritta.</p>
+        
+        <div class="disclaimer">
+          <p><strong>Disclaimer:</strong> Questo progetto è attualmente in fase pilota. I dati presentati sono preliminari e basati su un campione di 50 gruppi di anziani in Sardegna e Toscana. I modelli didattici e i percorsi esperienziali sono in fase di sviluppo e verranno perfezionati nelle prossime fasi del progetto.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Back to top button functionality
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Card hover animations
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.zIndex = '10';
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.zIndex = '1';
+      });
+    });
+    
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
