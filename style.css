@@ -282,3 +282,44 @@ footer {
     height: 150px;
   }
 }
+
+/* SEZIONE SERVIZI OFFERTI */
+.servizi-section {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.servizi-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.servizi-section h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.servizi-section p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.servizi-button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.servizi-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
