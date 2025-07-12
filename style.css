@@ -365,3 +365,16 @@ footer {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.site-footer .copyright {
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
