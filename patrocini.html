@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patrocini e Partenariati - Movere in Salus</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* STILI SPECIFICI PER PAGINA PATROCINI E PARTENARIATI */
+    .partnership-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3') center/cover;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+    }
+    
+    .partnership-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .partners-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: #3498db;
+    }
+    
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+    
+    .partner-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    
+    .partner-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .partner-logo {
+      padding: 30px 20px 20px;
+      background: #f8f9fa;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .partner-logo img {
+      max-width: 200px;
+      max-height: 150px;
+    }
+    
+    .partner-info {
+      padding: 25px;
+    }
+    
+    .partner-info h3 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+    
+    .partner-info p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    
+    .partner-type {
+      background: #3498db;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+    }
+    
+    .quote {
+      font-style: italic;
+      color: #3498db;
+      border-left: 3px solid #3498db;
+      padding-left: 15px;
+      margin: 20px 0;
+    }
+    
+    .support-section {
+      background: #f8f9fa;
+      padding: 60px 20px;
+      text-align: center;
+      border-top: 1px solid #eee;
+    }
+    
+    .support-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .support-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    .support-logo {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      padding: 15px;
+      transition: transform 0.3s ease;
+    }
+    
+    .support-logo:hover {
+      transform: scale(1.05);
+    }
+    
+    .support-logo img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    
+    .collaboration-section {
+      background: #2c3e50;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    .collaboration-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .collaboration-button {
+      background-color: #27ae60;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+    
+    .collaboration-button:hover {
+      background-color: #219653;
+      transform: translateY(-3px);
+    }
+    
+    /* Stili per la stampa (PDF) */
+    @media print {
+      header, nav, .collaboration-section, .social-share, .cta-button {
+        display: none;
+      }
+      
+      .partnership-hero {
+        background: white;
+        color: #000;
+        padding: 30px 20px;
+      }
+      
+      .partner-card {
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+      
+      .support-logo {
+        box-shadow: none;
+        border: 1px solid #ddd;
+      }
+      
+      .quote {
+        border-left: 1px solid #3498db;
+      }
+      
+      footer {
+        margin-top: 50px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .partnership-hero {
+        padding: 70px 20px;
+      }
+      
+      .partnership-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .partner-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .support-logos {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .support-logo {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <div class="logo">
+        <h1>Movere in Salus</h1>
+      </div>
+      <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="#contact">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="partnership-hero">
+    <h1>Patrocini e Partenariati</h1>
+    <p>Il riconoscimento istituzionale e le collaborazioni che valorizzano la nostra ricerca</p>
+  </section>
+
+  <!-- Partners Section -->
+  <section class="partners-section">
+    <h2 class="section-title">I Nostri Patrocini e Partenariati</h2>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+      Siamo onorati del sostegno ricevuto da importanti istituzioni e partner che riconoscono 
+      il valore scientifico e sociale dei nostri progetti.
+    </p>
+    
+    <div class="partner-grid">
+      <!-- Comune di Serdiana -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <img src="images/logo-comune-seridiana.png" alt="Comune di Serdiana">
+        </div>
+        <div class="partner-info">
+          <span class="partner-type">Patrocinio Istituzionale</span>
+          <h3>Comune di Serdiana</h3>
+          <p>Patrocinio ufficiale alle attività di ricerca</p>
+          
+          <div class="quote">
+            "Sosteniamo con convinzione le iniziative di Movere in Salus per il loro impatto positivo sulla comunità"
+          </div>
+          
+          <p><strong>Sindaco:</strong> Maurizio Cuccu</p>
+        </div>
+      </div>
+      
+      <!-- Associazione Sardonia Italia -->
+      <div class="partner-card">
+        <div class="partner-logo">
+          <img src="images/logo-sardonia-italia.png" alt="Associazione Sardonia Italia">
+        </div>
+        <div class="partner-info">
+          <span class="partner-type">Partenariato Scientifico</span>
+          <h3>Associazione Sardonia Italia</h3>
+          <p>Supporto scientifico e organizzativo</p>
+          
+          <div class="quote">
+            "Collaboriamo con Movere in Salus per promuovere innovazione sociale e valorizzazione del territorio"
+          </div>
+          
+          <p><strong>Referente:</strong> Arch. Vittorio Pisu</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Section -->
+  <section class="support-section">
+    <div class="support-content">
+      <h2 class="section-title">Con il supporto di</h2>
+      <p>Enti e organizzazioni che contribuiscono alla realizzazione dei nostri progetti</p>
+      
+      <div class="support-logos">
+        <div class="support-logo">
+          <img src="images/logo-comune-seridiana.png" alt="Comune di Serdiana">
+        </div>
+        <div class="support-logo">
+          <img src="images/logo-sardonia-italia.png" alt="Associazione Sardonia Italia">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collaboration Section -->
+  <section class="collaboration-section">
+    <div class="collaboration-content">
+      <h2>Diventa nostro partner</h2>
+      <p>Siamo aperti a nuove collaborazioni con istituzioni, aziende e organizzazioni che condividono la nostra missione</p>
+      <a href="mailto:movereinsalus.project@gmail.com?subject=Richiesta%20di%20collaborazione" class="collaboration-button">Proponi una collaborazione</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <p>&copy; 2025 Movere in Salus. Tutti i diritti riservati.</p>
+        <p>Progetti realizzati con il patrocinio del Comune di Serdiana</p>
+      </div>
+      
+      <div class="footer-section">
+         <p>&copy; 2025 Movere in Salus. Tutti i diritti riservati.</p>
+      <p>Coordinamento Scientifico: Prof.ssa Tiziana Mori</p>
+        <p><a href="index.html">Homepage</a></p>
+        <p><a href="servizi.html">Servizi</a></p>
+        <p><a href="patrocini.html">Patrocini e Partenariati</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
