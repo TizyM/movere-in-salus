@@ -323,3 +323,45 @@ footer {
   background-color: #2980b9;
   transform: translateY(-2px);
 }
+
+/* SEZIONE PATROCINI - PARTENARIATI HOMEPAGE */
+.patrocini-section {
+  background: linear-gradient(135deg, #2c3e50, #1a2530);
+  padding: 50px 0;
+  text-align: center;
+  color: white;
+}
+
+.patrocini-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.patrocini-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.patrocini-section p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.patrocini-button {
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.patrocini-button:hover {
+  background-color: #219653;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
