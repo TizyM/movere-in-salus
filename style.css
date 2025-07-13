@@ -496,3 +496,40 @@ footer {
   margin-top: 30px;
   color: #888;
 }
+
+.borghi-teaser {
+  background-color: #f5f5f5;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.borghi-teaser h2 {
+  color: #3c5a3c;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.borghi-teaser p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.borghi-links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #3c5a3c;
+}
+
+.btn-contact {
+  background-color: #6c9c6c;
+}
