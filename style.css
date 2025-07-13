@@ -550,3 +550,12 @@ footer {
 #parteolla .borgo-story {
   background: rgba(0, 96, 100, 0.05); /* blu tenue */
 }
+
+/* all’interno del tag <style> */
+#val-di-merse .borgo-hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/TizyM/movere-in-salus/main/Palazzetto (SI).jpg') center center;
+  background-size: cover;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+}
