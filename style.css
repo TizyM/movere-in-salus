@@ -559,3 +559,11 @@ footer {
   color: white;
   text-align: center;
 }
+
+#parteolla .borgo-hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/TizyM/movere-in-salus/main/Parteolla-borghi.jpg') center center;
+  background-size: cover;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+}
