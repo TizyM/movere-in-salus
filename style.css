@@ -533,3 +533,8 @@ footer {
 .btn-contact {
   background-color: #6c9c6c;
 }
+
+.borgo-content {
+  margin: 0 auto;
+  max-width: 800px;
+}
