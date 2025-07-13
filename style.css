@@ -538,3 +538,15 @@ footer {
   margin: 0 auto;
   max-width: 800px;
 }
+
+.borgo-content .borgo-story {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+}
+#val-di-merse .borgo-story {
+  background: rgba(46, 125, 50, 0.05); /* verde tenue */
+}
+#parteolla .borgo-story {
+  background: rgba(0, 96, 100, 0.05); /* blu tenue */
+}
