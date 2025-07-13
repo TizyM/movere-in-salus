@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borghi in Salus - Certificazione Borghi Sostenibili</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2e7d32;
+      --secondary: #006064;
+      --accent: #f57f17;
+      --light: #f1f8e9;
+      --dark: #1b5e20;
+      --darker: #0d3c13;
+      --transition: all 0.4s ease;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+      position: relative;
+      background-image: linear-gradient(to bottom, #f8f9fa 0%, #e8f5e9 100%);
+    }
+    
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--darker), var(--secondary));
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 4px solid var(--accent);
+    }
+    
+    .header-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255,255,255,0.05) 0%, transparent 20%);
+      pointer-events: none;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .logo {
+      width: 90px;
+      height: 90px;
+      background: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 2.5rem;
+      color: var(--dark);
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border: 2px solid var(--accent);
+    }
+    
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 2.8rem;
+      margin-bottom: 0.8rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      letter-spacing: -0.5px;
+    }
+    
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    
+    .lang-btn {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    
+    /* Borgo Hero Section */
+    .borgo-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), url('https://images.unsplash.com/photo-1515586838455-8f8f940d6853?ixlib=rb-4.0.3') center/cover;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    
+    .borgo-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .borgo-hero p {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    /* Borgo Sections */
+    .borgo-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    
+    .borgo-container {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      margin-bottom: 50px;
+    }
+    
+    .borgo-header {
+      background: var(--primary);
+      color: white;
+      padding: 30px;
+      position: relative;
+    }
+    
+    .borgo-title {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+      font-family: 'Merriweather', serif;
+    }
+    
+    .borgo-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    
+    .borgo-content {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    
+    .borgo-story {
+      line-height: 1.8;
+    }
+    
+    .borgo-story h3 {
+      color: var(--darker);
+      margin: 20px 0 15px;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 5px;
+      display: inline-block;
+    }
+    
+    .borgo-highlights {
+      background: var(--light);
+      padding: 25px;
+      border-radius: 10px;
+    }
+    
+    .highlight-item {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .highlight-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .highlight-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--darker);
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    .testimonial {
+      background: white;
+      border-left: 4px solid var(--accent);
+      padding: 20px;
+      margin: 20px 0;
+      font-style: italic;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    
+    .testimonial-author {
+      font-weight: bold;
+      margin-top: 10px;
+      font-style: normal;
+    }
+    
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .activity-card {
+      background: var(--light);
+      border-radius: 10px;
+      padding: 20px;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .activity-card h4 {
+      color: var(--darker);
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+    
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Certificazione Section */
+    .certification-section {
+      background: linear-gradient(135deg, var(--darker), var(--secondary));
+      padding: 60px 20px;
+      color: white;
+      text-align: center;
+    }
+    
+    .certification-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .certification-steps {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .step-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 25px;
+      width: 220px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .step-number {
+      background: var(--accent);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0 auto 15px;
+    }
+    
+    .contact-form {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 700px;
+      margin: 40px auto 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: var(--darker);
+    }
+    
+    .form-group input, 
+    .form-group textarea, 
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    
+    .submit-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition);
+      display: block;
+      margin: 20px auto 0;
+    }
+    
+    .submit-btn:hover {
+      background: #e06c00;
+    }
+    
+    /* Footer */
+    .footer {
+      background: linear-gradient(to bottom, var(--darker), var(--secondary));
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    
+    .footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+    }
+    
+    .legal-info {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+      background: rgba(0,0,0,0.2);
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    
+    .legal-title {
+      color: var(--accent);
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    
+    .copyright {
+      margin-top: 3rem;
+      opacity: 0.8;
+      font-size: 0.95rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+    }
+    
+    .trademark {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .trademark img {
+      height: 50px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .borgo-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .borgo-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .borgo-title {
+        font-size: 1.8rem;
+      }
+    }
+    
+    @media print {
+      .language-switcher, .borgo-hero, .gallery, .certification-section, .footer {
+        display: none;
+      }
+      
+      body {
+        background: white;
+      }
+      
+      .borgo-section {
+        margin: 20px 0;
+      }
+      
+      .borgo-container {
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="header-pattern"></div>
+    <div class="logo-container">
+      <div class="logo">BiS</div>
+      <div class="header-content">
+        <h1>Borghi in Salus</h1>
+        <p class="subtitle">Certificazione di borghi sostenibili per un turismo rigenerativo</p>
+      </div>
+    </div>
+    
+    <div class="language-switcher">
+      <button class="lang-btn">EN</button>
+      <button class="lang-btn">FR</button>
+      <button class="lang-btn">DE</button>
+      <button class="lang-btn">ES</button>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="borgo-hero">
+    <h1>Scopri i Borghi Certificati</h1>
+    <p>Comunità sostenibili dove tradizione, natura e innovazione si incontrano</p>
+  </section>
+  
+  <!-- Val di Merse Section -->
+  <section id="val-di-merse" class="borgo-section">
+    <div class="borgo-container">
+      <div class="borgo-header">
+        <h2 class="borgo-title">Val di Merse, Toscana</h2>
+        <p class="borgo-subtitle">Sede territoriale regionale a Palazzetto di Chiusdino</p>
+      </div>
+      
+      <div class="borgo-content">
+        <div class="borgo-story">
+          <h3>La Storia di Palazzetto</h3>
+          <p>Piccola frazione di Chiusdino, Palazzetto è un gioiello medievale immerso nelle colline toscane. Con appena 230 abitanti, questo borgo custodisce tradizioni secolari e un patrimonio naturalistico di rara bellezza.</p>
+          
+          <h3>Mestieri Tradizionali</h3>
+          <div class="testimonial">
+            "Nella mia bottega a Palazzetto, vorrei insegnare ai giovani l'arte della lavorazione del legno come faceva mio padre."
+            <div class="testimonial-author">- Paris, 75 anni, Maestro falegname</div>
+          </div>
+          
+          <p>Presso la istituenda bottega artigiana di Palazzetto, gli anziani maestri tramandano:</p>
+          <ul style="padding-left: 20px; margin: 15px 0;">
+            <li>Lavorazione del legno e intaglio tradizionale</li>
+            <li>Produzione di filamenti, moschettoni e attacchi per carrozze e cavalli </li>
+            <li>Restauro di oggetti antichi per trasformarli in oggetti di arredamento</li>
+          </ul>
+          
+          <h3>Erboristeria Locale</h3>
+          <p>Guidati dalla nostra erborista Federica, scopriremo le erbe spontanee della zona:</p>
+          <ul style="padding-left: 20px; margin: 15px 0;">
+            <li><strong>Alloro:</strong> per infusi digestivi</li>
+            <li><strong>Lavanda:</strong> calmante naturale</li>
+            <li><strong>Calendula:</strong> proprietà cicatrizzanti</li>
+            <li><strong>Ortica:</strong> depurativa e ricostituente</li>
+          </ul>
+          
+          <h3>Esperienze nella Natura</h3>
+          <div class="activity-grid">
+            <div class="activity-card">
+              <h4><i class="fas fa-hiking"></i> Escursioni nei Boschi</h4>
+              <p>Percorsi guidati attraverso le foreste di faggi secolari e le sorgenti termali naturali</p>
+            </div>
+            
+            <div class="activity-card">
+              <h4><i class="fas fa-bicycle"></i> Tour in Bicicletta</h4>
+              <p>Itinerari cicloturistici lungo il fiume Merse con soste in aziende agricole locali</p>
+            </div>
+            
+            <div class="activity-card">
+              <h4><i class="fas fa-utensils"></i> Degustazioni</h4>
+              <p>Pranzi contadini con prodotti a km0 e vini del territorio</p>
+            </div>
+          </div>
+          
+          <h3>Galleria</h3>
+          <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1593692909680-61d48ae9a1e1?ixlib=rb-4.0.3" alt="Val di Merse">
+            <img src="https://images.unsplash.com/photo-1570804439979-0d49abced5be?ixlib=rb-4.0.3" alt="Palazzetto">
+            <img src="https://images.unsplash.com/photo-1622737133809-d95047b9e673?ixlib=rb-4.0.3" alt="Artigianato">
+          </div>
+        </div>
+        
+        <div class="borgo-highlights">
+          <div class="highlight-item">
+            <div class="highlight-title">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Dove Siamo</span>
+            </div>
+            <p>Palazzetto di Chiusdino, Provincia di Siena, Toscana</p>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="highlight-title">
+              <i class="fas fa-star"></i>
+              <span>Punti di Forza</span>
+            </div>
+            <p>Patrimonio storico-medievale intatto, comunità coesa, produzioni biologiche certificate</p>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="highlight-title">
+              <i class="fas fa-hands-helping"></i>
+              <span>Coordinamento</span>
+            </div>
+            <p>Prof.ssa Tiziana Mori - Responsabile Scientifico Territoriale, Marketin e comunicazione istituzionale</p>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="highlight-title">
+              <i class="fas fa-calendar-check"></i>
+              <span>Prossimi Eventi</span>
+            </div>
+            <p>Festa del Bosco - (si organizza su risciesta da settembre ad ottobre)<br>Workshop di Erboristeria e piante officinali. Su richiesta si attivano Corsi di formazione per operatori da personale specializzato - Ogni sabato</p>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="highlight-title">
+              <i class="fas fa-link"></i>
+              <span>Link Utili</span>
+            </div>
+            <p><a href="https://www.grandtourvaldimerse.it/" style="color: var(--primary);">Grand Tour Val di Merse</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Parteolla Section -->
+  <section id="parteolla" class="borgo-section">
+    <div class="borgo-container">
+      <div class="borgo-header">
+        <h2 class="borgo-title">Parteolla, Sardegna</h2>
+        <p class="borgo-subtitle">Terra di tradizioni millenarie nel cuore del Sud Sardegna</p>
+      </div>
+      
+      <div class="borgo-content">
+        <div class="borgo-story">
+          <h3>Il Cuore della Sardegna</h3>
+          <p>Il Parteolla è una regione storica della Sardegna meridionale, caratterizzata da dolci colline ricoperte di uliveti secolari e vigneti. Un territorio dove il tempo sembra essersi fermato, custode di tradizioni antiche.</p>
+          
+          <h3>Mestieri Tradizionali</h3>
+          <div class="testimonial">
+            "Tessevo tappeti fin da bambina, oggi insegno questa arte alle giovani generazioni. Ogni nodo è un legame con le nostre radici."
+            <div class="testimonial-author">- Maria, 78 anni, Maestra tessitrice</div>
+          </div>
+          
+          <p>Nelle botteghe del Parteolla, gli anziani artigiani preservano:</p>
+          <ul style="padding-left: 20px; margin: 15px 0;">
+            <li>Tessitura tradizionale sarda</li>
+            <li>Lavorazione del sughero</li>
+            <li>Produzione del vino Cannonau</li>
+            <li>Creazione di gioielli in filigrana</li>
+          </ul>
+          
+          <h3>Esperienze Autentiche</h3>
+          <div class="activity-grid">
+            <div class="activity-card">
+              <h4><i class="fas fa-wine-bottle"></i> Percorsi Enogastronomici</h4>
+              <p>Visite a cantine storiche e degustazioni di prodotti tipici, acccompagnati da intrattenimento musicale e teatrale</p>
+            </div>
+            
+            <div class="activity-card">
+              <h4><i class="fas fa-hands"></i> Laboratori Artigianali</h4>
+              <p>Corsi di tessitura e lavorazione del sughero</p>
+            </div>
+            
+            <div class="activity-card">
+              <h4><i class="fas fa-mountain"></i> Trekking Culturali</h4>
+              <p>Cammini tra nuraghi, domus de janas e Chiese campestri</p>
+            </div>
+          </div>
+          
+          <h3>Galleria</h3>
+          <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1602005007251-1a7d18c6bb3f?ixlib=rb-4.0.3" alt="Parteolla">
+            <img src="https://images.unsplash.com/photo-1572004604866-5b3a5b838b0d?ixlib=rb-4.0.3" alt="Tessitura">
+            <img src="https://images.unsplash.com/photo-1603634924080-0b2f3b9a0b9d?ixlib=rb-4.0.3" alt="Cantine">
+          </div>
+        </div>
+        
+        <div class="borgo-highlights">
+          <div class="highlight-item">
+            <div class="highlight-title">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Dove Siamo</span>
+            </div>
+            <p>Comuni di Serdiana, Donori, Barrali e altri - Provincia del Sud Sardegna</p>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="highlight-title">
+              <i class="fas fa-star"></i>
+              <span>Punti di Forza</span>
+            </div>
+            <p>Patrimonio archeologico unico, produzioni enogastronomiche d'eccellenza, ospitalità genuina</p>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="highlight-title">
+              <i class="fas fa-calendar-check"></i>
+              <span>Prossimi Eventi</span>
+            </div>
+            <p>Sagra del Vino Novello - Ottobre 2025<br>Festa dell'Artigianato - Ogni prima domenica del mese</p>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="highlight-title">
+              <i class="fas fa-link"></i>
+              <span>Link Utili</span>
+            </div>
+            <p><a href="https://www.unionecomuniparteolla.ca.it/" style="color: var(--primary);">Unione Comuni Parteolla</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Certificazione Section -->
+  <section id="certificazione" class="certification-section">
+    <div class="certification-container">
+      <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Vuoi attivare Movere in Salus nel tuo borgo?</h2>
+      <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Il nostro programma di certificazione è scalabile e attivabile su richiesta</p>
+      
+      <div class="certification-steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Valutazione</h3>
+          <p>Analisi del territorio e del potenziale</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Progettazione</h3>
+          <p>Sviluppo di un piano personalizzato</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Formazione</h3>
+          <p>Preparazione degli attori locali</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Certificazione</h3>
+          <p>Rilascio del marchio "Borgo in Salus"</p>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <h3 style="text-align: center; margin-bottom: 20px; color: var(--darker);">Richiedi informazioni</h3>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nome completo</label>
+              <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="role">Ruolo/Ente</label>
+              <input type="text" id="role" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <label for="phone">Telefono</label>
+              <input type="tel" id="phone">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </div>
+            
+                
+          <div class="form-group">
+            <label for="borgo">Borgo/Comune di interesse</label>
+            <input type="text" id="borgo" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="service">Tipo di richiesta</label>
+            <select id="service" required>
+              <option value="">Seleziona...</option>
+              <option value="certificazione">Certificazione Borgo</option>
+              <option value="info">Informazioni generali</option>
+              <option value="visita">Organizzazione visita</option>
+              <option value="altro">Altro</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Messaggio (specificare eventuali esigenze particolari)</label>
+            <textarea id="message" rows="4" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">Invia Richiesta</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="trademark">
+        <img src="Borghi%20in%20salus-marchio%20certificato%20per%20i%20Comuni.png" alt="Marchio Borghi in Salus">
+        <div>
+          <p>Borghi in Salus™ - Marchio Registrato</p>
+          <p>Proprietà intellettuale di Movere in Salus</p>
+        </div>
+      </div>
+      
+      <div class="legal-info">
+        <h3 class="legal-title">Note Legali e Copyright</h3>
+        <p>© 2025 Movere in Salus. Tutti i diritti riservati. 
+          Il progetto "Borghi in Salus" è proprietà intellettuale esclusiva della Prof.ssa Tiziana Mori.</p>
+        <p>È vietata qualsiasi forma di riproduzione, distribuzione o utilizzo non autorizzato dei contenuti, modelli operativi, metodologie di certificazione e materiali didattici presenti su questa pagina.</p>
+        <p>Coordinamento Scientifico, Marketing e Partenariati: Prof.ssa Tiziana Mori e Team di ricerca "gruppo Movere in salus"</p>
+        <p>Contatti esclusivi: movereinsalus.project@gmail.com</p>
+      </div>
+      
+      <div class="copyright">
+        <p>I contenuti di questa pagina sono protetti dalle leggi sul diritto d'autore e dalla normativa sulla proprietà intellettuale. Ogni violazione sarà perseguita a termini di legge.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Back to top button
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Form submission
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Grazie per la tua richiesta! Sarai ricontattato entro 48 ore.');
+      form.reset();
+    });
+    
+    // Language switcher (placeholder)
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert('Funzionalità di traduzione in fase di implementazione');
+      });
+    });
+  </script>
+</body>
+</html>
