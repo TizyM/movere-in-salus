@@ -655,9 +655,40 @@
   </section>
   
   <!-- Parteolla Section -->
-  <section id="parteolla" class="borgo-section">
-  <div class="borgo-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/TizyM/movere-in-salus/main/Parteolla.jpg') center/cover; padding: 80px 20px; color: white;">
-    <h1>Parteolla, Sardegna</h1>
+ <!-- Modifica solo la sezione hero di Parteolla con questo codice -->
+<div class="borgo-hero" style="
+  background: linear-gradient(rgba(0,0,0,0.3), 
+              url('https://raw.githubusercontent.com/TizyM/movere-in-salus/main/Parteolla-borghi.jpg') center/cover;
+  padding: 100px 20px;
+  color: white;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60vh;
+">
+  <div style="
+    background: rgba(0, 96, 100, 0.7); /* Sfondo semitrasparente */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid var(--accent);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  ">
+    <h1 style="
+      font-size: 3.2rem; 
+      margin-bottom: 15px;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.6);
+    ">Parteolla, Sardegna</h1>
+    <p style="
+      font-size: 1.8rem;
+      font-weight: 500;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    ">Terra di tradizioni millenarie nel cuore del Sud Sardegna</p>
+  </div>
+</div>
     <p>Terra di tradizioni millenarie nel cuore del Sud Sardegna</p>
   </div>
 
@@ -757,38 +788,63 @@
     </div>
   </section>
   
-  <!-- Certificazione Section -->
-  <section id="certificazione" class="certification-section">
-    <div class="certification-container">
-      <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Vuoi attivare Movere in Salus nel tuo borgo?</h2>
-      <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Il nostro programma di certificazione è scalabile e attivabile su richiesta</p>
-      
-      <div class="certification-steps">
-        <div class="step-card">
+ <!-- Nuova sezione Certificazione -->
+<section id="certificazione" class="certification-section">
+  <div class="certification-container">
+    <div class="certification-header">
+      <h2>Vuoi attivare Movere in Salus nel tuo borgo?</h2>
+      <p>Il nostro programma di certificazione è scalabile e attivabile su richiesta</p>
+    </div>
+    
+    <div class="certification-steps">
+      <div class="step-card">
+        <div class="step-icon">
+          <i class="fas fa-search"></i>
           <div class="step-number">1</div>
-          <h3>Valutazione</h3>
-          <p>Analisi del territorio e del potenziale</p>
         </div>
-        
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h3>Progettazione</h3>
-          <p>Sviluppo di un piano personalizzato</p>
-        </div>
-        
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h3>Formazione</h3>
-          <p>Preparazione degli attori locali</p>
-        </div>
-        
-        <div class="step-card">
-          <div class="step-number">4</div>
-          <h3>Certificazione</h3>
-          <p>Rilascio del marchio "Borgo in Salus"</p>
-        </div>
+        <h3>Valutazione</h3>
+        <p>Analisi del territorio e del potenziale</p>
       </div>
       
+      <div class="step-card">
+        <div class="step-icon">
+          <i class="fas fa-drafting-compass"></i>
+          <div class="step-number">2</div>
+        </div>
+        <h3>Progettazione</h3>
+        <p>Sviluppo di un piano personalizzato</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-icon">
+          <i class="fas fa-graduation-cap"></i>
+          <div class="step-number">3</div>
+        </div>
+        <h3>Formazione</h3>
+        <p>Preparazione degli attori locali</p>
+      </div>
+      
+      <div class="step-card">
+        <div class="step-icon">
+          <i class="fas fa-medal"></i>
+          <div class="step-number">4</div>
+        </div>
+        <h3>Certificazione</h3>
+        <p>Rilascio del marchio "Borgo in Salus"</p>
+      </div>
+    </div>
+    
+    <div class="certification-cta">
+      <div class="cta-content">
+        <h3>Pronto a trasformare il tuo borgo?</h3>
+        <p>Contattaci oggi stesso per una consulenza gratuita e scopri come ottenere la certificazione</p>
+        <a href="#certificazione" class="cta-button">
+          <i class="fas fa-envelope"></i> Richiedi informazioni
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
       <!-- Sezione Contatti -->
       <div class="contact-form">
         <h3 style="margin-bottom: 20px; color: #1b5e20;">Contattaci</h3>
