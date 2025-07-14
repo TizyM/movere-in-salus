@@ -567,3 +567,24 @@ footer {
   color: white;
   text-align: center;
 }
+
+/* Add this to your existing CSS */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-container {
+    flex: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Apply to all sections */
+header, .borgo-section, .certification-section, .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+}
