@@ -1,3 +1,13 @@
+:root {
+  --primary: #2e7d32;
+  --secondary: #006064;
+  --accent: #f57f17;
+  --light: #f1f8e9;
+  --dark: #1b5e20;
+  --darker: #0d3c13;
+  --transition: all 0.4s ease;
+}
+
 /* === STILE GENERALE === */
 body {
   font-family: 'Segoe UI', sans-serif;
