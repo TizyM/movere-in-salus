@@ -685,3 +685,96 @@ section {
     right: 10px;
   }
 }
+
+/* Sezione patrimonio storico */
+.heritage-section {
+  margin-top: 40px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  border: 2px dashed var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.heritage-section:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23f57f17" stroke-width="2" stroke-dasharray="8,4" opacity="0.3"/></svg>');
+  z-index: -1;
+}
+
+.heritage-section h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--darker);
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.heritage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.heritage-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.heritage-card:hover {
+  transform: translateY(-5px);
+}
+
+.heritage-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.heritage-content {
+  padding: 20px;
+}
+
+.heritage-content h4 {
+  color: var(--secondary);
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.heritage-content p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.heritage-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.heritage-btn:hover {
+  background: #e06c00;
+}
+
+.heritage-btn i {
+  margin-left: 8px;
+}
