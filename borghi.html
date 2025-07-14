@@ -30,6 +30,7 @@
       line-height: 1.6;
       position: relative;
       background-image: linear-gradient(to bottom, #f8f9fa 0%, #e8f5e9 100%);
+      text-align: center; /* Centratura generale di tutto il testo */
     }
     
     /* Header */
@@ -37,7 +38,6 @@
       background: linear-gradient(135deg, var(--darker), var(--secondary));
       color: white;
       padding: 2rem 1rem;
-      text-align: center;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
       position: relative;
       overflow: hidden;
@@ -85,12 +85,15 @@
       margin: 0 auto;
     }
     
-    h1 {
+    h1, h2, h3, h4, h5, h6 {
       font-family: 'Merriweather', serif;
-      font-size: 2.8rem;
       margin-bottom: 0.8rem;
       text-shadow: 0 2px 4px rgba(0,0,0,0.3);
       letter-spacing: -0.5px;
+    }
+    
+    h1 {
+      font-size: 2.8rem;
     }
     
     .language-switcher {
@@ -119,7 +122,6 @@
     .borgo-hero {
       background: linear-gradient(rgba(0, 0, 0, 0.6), url('https://images.unsplash.com/photo-1515586838455-8f8f940d6853?ixlib=rb-4.0.3') center/cover;
       padding: 100px 20px;
-      text-align: center;
       color: white;
       position: relative;
     }
@@ -150,6 +152,20 @@
       margin-bottom: 50px;
     }
     
+    /* Nuovo stile per Palazzetto */
+    .palazzetto-container {
+      background: linear-gradient(to bottom, #ffffff, #f1f8e9);
+      border: 3px solid #2e7d32;
+      border-radius: 15px;
+    }
+    
+    /* Nuovo stile per Parteolla */
+    .parteolla-container {
+      background: linear-gradient(to bottom, #ffffff, #e3f2fd);
+      border: 3px solid #006064;
+      border-radius: 15px;
+    }
+    
     .borgo-header {
       background: var(--primary);
       color: white;
@@ -160,7 +176,6 @@
     .borgo-title {
       font-size: 2.3rem;
       margin-bottom: 10px;
-      font-family: 'Merriweather', serif;
     }
     
     .borgo-subtitle {
@@ -177,6 +192,7 @@
     
     .borgo-story {
       line-height: 1.8;
+      text-align: left; /* Testo giustificato a sinistra per leggibilità */
     }
     
     .borgo-story h3 {
@@ -186,12 +202,15 @@
       border-bottom: 2px solid var(--accent);
       padding-bottom: 5px;
       display: inline-block;
+      text-align: center; /* Centratura dei titoli */
+      width: 100%; /* Occupa tutta la larghezza */
     }
     
     .borgo-highlights {
       background: var(--light);
       padding: 25px;
       border-radius: 10px;
+      text-align: left; /* Testo giustificato a sinistra per leggibilità */
     }
     
     .highlight-item {
@@ -213,6 +232,7 @@
       color: var(--darker);
       margin-bottom: 10px;
       font-weight: bold;
+      justify-content: center; /* Centratura dei titoli */
     }
     
     .testimonial {
@@ -222,6 +242,7 @@
       margin: 20px 0;
       font-style: italic;
       box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      text-align: center; /* Centratura delle testimonianze */
     }
     
     .testimonial-author {
@@ -242,6 +263,7 @@
       border-radius: 10px;
       padding: 20px;
       border: 1px solid rgba(0,0,0,0.1);
+      text-align: center; /* Centratura del contenuto */
     }
     
     .activity-card h4 {
@@ -270,7 +292,6 @@
       background: linear-gradient(135deg, var(--darker), var(--secondary));
       padding: 60px 20px;
       color: white;
-      text-align: center;
     }
     
     .certification-container {
@@ -293,6 +314,7 @@
       width: 220px;
       backdrop-filter: blur(5px);
       border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Aggiunta ombra per effetto box */
     }
     
     .step-number {
@@ -315,10 +337,12 @@
       max-width: 700px;
       margin: 40px auto 0;
       box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      text-align: center; /* Centratura del form */
     }
     
     .form-group {
       margin-bottom: 20px;
+      text-align: left; /* Allineamento a sinistra per i campi */
     }
     
     .form-group label {
@@ -367,7 +391,6 @@
       background: linear-gradient(to bottom, var(--darker), var(--secondary));
       color: white;
       padding: 4rem 2rem;
-      text-align: center;
       position: relative;
     }
     
@@ -395,6 +418,7 @@
       color: var(--accent);
       margin-bottom: 15px;
       font-size: 1.3rem;
+      text-align: center; /* Centratura titolo legale */
     }
     
     .copyright {
@@ -407,6 +431,7 @@
       line-height: 1.7;
       border-top: 1px solid rgba(255,255,255,0.1);
       padding-top: 2rem;
+      text-align: center; /* Centratura copyright */
     }
     
     .trademark {
@@ -443,6 +468,11 @@
       
       .borgo-title {
         font-size: 1.8rem;
+      }
+      
+      .certification-steps {
+        flex-direction: column;
+        align-items: center;
       }
     }
     
@@ -498,12 +528,12 @@
   
   <!-- Val di Merse Section -->
   <section id="val-di-merse" class="borgo-section">
-  <div class="borgo-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/TizyM/movere-in-salus/main/Palazzetto%20(SI).jpg') center/cover; padding: 80px 20px; color: white; text-align: center;">
+  <div class="borgo-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/TizyM/movere-in-salus/main/Palazzetto%20(SI).jpg') center/cover; padding: 80px 20px; color: white;">
     <h1>Val di Merse, Toscana</h1>
-    <p style="font-size: 1.2rem;">Sede territoriale regionale a Palazzetto di Chiusdino</p>
+    <p>Sede territoriale regionale a Palazzetto di Chiusdino</p>
   </div>
 
-  <div class="borgo-container">
+  <div class="borgo-container palazzetto-container">
 
       <div class="borgo-header">
         <h2 class="borgo-title">Val di Merse, Toscana</h2>
@@ -522,7 +552,7 @@
           </div>
           
           <p>Presso la istituenda bottega artigiana di Palazzetto, gli anziani maestri tramandano:</p>
-          <ul style="padding-left: 20px; margin: 15px 0;">
+          <ul style="padding-left: 20px; margin: 15px 0; text-align: left;">
             <li>Lavorazione del legno e intaglio tradizionale</li>
             <li>Produzione di filamenti, moschettoni e attacchi per carrozze e cavalli </li>
             <li>Restauro di oggetti antichi per trasformarli in oggetti di arredamento</li>
@@ -530,7 +560,7 @@
           
           <h3>Erboristeria Locale</h3>
           <p>Guidati dalla nostra erborista Federica, scopriremo le erbe spontanee della zona:</p>
-          <ul style="padding-left: 20px; margin: 15px 0;">
+          <ul style="padding-left: 20px; margin: 15px 0; text-align: left;">
             <li><strong>Alloro:</strong> per infusi digestivi</li>
             <li><strong>Lavanda:</strong> calmante naturale</li>
             <li><strong>Calendula:</strong> proprietà cicatrizzanti</li>
@@ -554,8 +584,7 @@
               <p>Pranzi contadini con prodotti a km0 e vini del territorio</p>
             </div>
           </div>
-          
-         
+        </div>
         
         <div class="borgo-highlights">
           <div class="highlight-item">
@@ -579,7 +608,7 @@
               <i class="fas fa-hands-helping"></i>
               <span>Coordinamento</span>
             </div>
-            <p>Prof.ssa Tiziana Mori - Responsabile Scientifico Territoriale, Marketin e comunicazione istituzionale</p>
+            <p>Prof.ssa Tiziana Mori - Responsabile Scientifico Territoriale, Marketing e comunicazione istituzionale</p>
           </div>
           
           <div class="highlight-item">
@@ -587,7 +616,7 @@
               <i class="fas fa-calendar-check"></i>
               <span>Prossimi Eventi</span>
             </div>
-            <p>Festa del Bosco - (si organizza su risciesta da settembre ad ottobre)<br>Workshop di Erboristeria e piante officinali. Su richiesta si attivano Corsi di formazione per operatori da personale specializzato - Ogni sabato</p>
+            <p>Festa del Bosco - (si organizza su richiesta da settembre ad ottobre)<br>Workshop di Erboristeria e piante officinali. Su richiesta si attivano Corsi di formazione per operatori da personale specializzato - Ogni sabato</p>
           </div>
           
           <div class="highlight-item">
@@ -604,12 +633,12 @@
   
   <!-- Parteolla Section -->
   <section id="parteolla" class="borgo-section">
-  <div class="borgo-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/TizyM/movere-in-salus/main/Parteolla.jpg') center/cover; padding: 80px 20px; color: white; text-align: center;">
+  <div class="borgo-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/TizyM/movere-in-salus/main/Parteolla.jpg') center/cover; padding: 80px 20px; color: white;">
     <h1>Parteolla, Sardegna</h1>
-    <p style="font-size: 1.2rem;">Terra di tradizioni millenarie nel cuore del Sud Sardegna</p>
+    <p>Terra di tradizioni millenarie nel cuore del Sud Sardegna</p>
   </div>
 
-  <div class="borgo-container">
+  <div class="borgo-container parteolla-container">
 
       <div class="borgo-header">
         <h2 class="borgo-title">Parteolla, Sardegna</h2>
@@ -628,7 +657,7 @@
           </div>
           
           <p>Nelle botteghe del Parteolla, gli anziani artigiani preservano:</p>
-          <ul style="padding-left: 20px; margin: 15px 0;">
+          <ul style="padding-left: 20px; margin: 15px 0; text-align: left;">
             <li>Tessitura tradizionale sarda</li>
             <li>Lavorazione del sughero</li>
             <li>Produzione del vino Cannonau</li>
@@ -652,8 +681,8 @@
               <p>Cammini tra nuraghi, domus de janas e Chiese campestri</p>
             </div>
           </div>
-          
-                 
+        </div>
+        
         <div class="borgo-highlights">
           <div class="highlight-item">
             <div class="highlight-title">
@@ -724,27 +753,28 @@
       </div>
       
       <!-- Sezione Contatti -->
-<div class="contact-form">
-  <h3 style="text-align: center; margin-bottom: 20px; color: #1b5e20;">Contattaci</h3>
-  <div style="background: #fdfdfd; border: 2px dashed #2e7d32; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
-    <p style="font-size: 1.2rem; margin-bottom: 15px;">
-      <strong>📧 Email:</strong> 
-      <a href="mailto:movereinsalus.project@gmail.com" style="color: #006064; font-weight: bold;">
-        movereinsalus.project@gmail.com
-      </a>
-    </p>
-    <p style="font-size: 0.95rem; color: #555; line-height: 1.5; font-variant: small-caps;">
-      Nella tua email ti chiediamo di indicare: <br/>
-      - NOME E COGNOME<br/>
-      - RUOLO / ENTE<br/>
-      - BORGO O COMUNE DI INTERESSE<br/>
-      - TIPO DI RICHIESTA<br/>
-      - UN MESSAGGIO DESCRITTIVO<br/><br/>
-      Ti risponderemo entro 48 ore.
-    </p>
-  </div>
-</div>
-
+      <div class="contact-form">
+        <h3 style="margin-bottom: 20px; color: #1b5e20;">Contattaci</h3>
+        <div style="background: #fdfdfd; border: 2px dashed #2e7d32; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+          <p style="font-size: 1.2rem; margin-bottom: 15px;">
+            <strong>📧 Email:</strong> 
+            <a href="mailto:movereinsalus.project@gmail.com" style="color: #006064; font-weight: bold;">
+              movereinsalus.project@gmail.com
+            </a>
+          </p>
+          <p style="font-size: 0.95rem; color: #555; line-height: 1.5; font-variant: small-caps;">
+            Nella tua email ti chiediamo di indicare: <br/>
+            - NOME E COGNOME<br/>
+            - RUOLO / ENTE<br/>
+            - BORGO O COMUNE DI INTERESSE<br/>
+            - TIPO DI RICHIESTA<br/>
+            - UN MESSAGGIO DESCRITTIVO<br/><br/>
+            Ti risponderemo entro 48 ore.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
   
   <!-- Footer -->
   <footer class="footer">
@@ -765,45 +795,6 @@
         <p>Coordinamento Scientifico, Marketing e Partenariati: Prof.ssa Tiziana Mori e Team di ricerca "gruppo Movere in salus"</p>
         <p>Contatti esclusivi: movereinsalus.project@gmail.com</p>
       </div>
-
-      <!-- Navigation Section -->
-<section class="navigation-section">
-  <div class="main-container">
-    <div class="navigation-grid">
-      <div class="nav-card">
-        <a href="index.html">
-          <i class="fas fa-home"></i>
-          <h3>Home</h3>
-          <p>Torna alla pagina principale</p>
-        </a>
-      </div>
-      
-      <div class="nav-card">
-        <a href="servizi.html">
-          <i class="fas fa-concierge-bell"></i>
-          <h3>Servizi</h3>
-          <p>Scopri la nostra offerta</p>
-        </a>
-      </div>
-      
-      <div class="nav-card">
-        <a href="borghi.html">
-          <i class="fas fa-certificate"></i>
-          <h3>Borghi Certificati</h3>
-          <p>Consulta l'elenco completo</p>
-        </a>
-      </div>
-      
-      <div class="nav-card">
-        <a href="contatti.html">
-          <i class="fas fa-envelope"></i>
-          <h3>Contatti</h3>
-          <p>Richiedi informazioni</p>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
       
       <div class="copyright">
         <p>I contenuti di questa pagina sono protetti dalle leggi sul diritto d'autore e dalla normativa sulla proprietà intellettuale. Ogni violazione sarà perseguita a termini di legge.</p>
