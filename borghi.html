@@ -30,6 +30,9 @@
       line-height: 1.6;
       position: relative;
       background-image: linear-gradient(to bottom, #f8f9fa 0%, #e8f5e9 100%);
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
     
     /* Header */
@@ -42,6 +45,8 @@
       position: relative;
       overflow: hidden;
       border-bottom: 4px solid var(--accent);
+      border-radius: 0 0 12px 12px;
+      margin-bottom: 30px;
     }
     
     .header-pattern {
@@ -115,13 +120,16 @@
       background: rgba(255,255,255,0.3);
     }
     
-    /* Borgo Hero Section */
+    /* Hero Section */
     .borgo-hero {
       background: linear-gradient(rgba(0, 0, 0, 0.6), url('https://images.unsplash.com/photo-1515586838455-8f8f940d6853?ixlib=rb-4.0.3') center/cover;
       padding: 100px 20px;
       text-align: center;
       color: white;
       position: relative;
+      border-radius: 12px;
+      margin: 20px 0 40px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
     
     .borgo-hero h1 {
@@ -133,6 +141,51 @@
       font-size: 1.5rem;
       max-width: 800px;
       margin: 0 auto;
+    }
+    
+    /* Button Styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--darker), var(--secondary));
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin: 10px 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: var(--darker);
+      border: 2px solid var(--darker);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--light);
+    }
+    
+    .btn-accent {
+      background: var(--accent);
+    }
+    
+    /* Icon Title */
+    .icon-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0 15px;
     }
     
     /* Borgo Sections */
@@ -148,6 +201,11 @@
       overflow: hidden;
       box-shadow: 0 8px 25px rgba(0,0,0,0.08);
       margin-bottom: 50px;
+      transition: transform 0.3s ease;
+    }
+    
+    .borgo-container:hover {
+      transform: translateY(-5px);
     }
     
     .borgo-header {
@@ -222,17 +280,19 @@
       margin: 20px 0;
       font-style: italic;
       box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-radius: 8px;
     }
     
     .testimonial-author {
       font-weight: bold;
       margin-top: 10px;
       font-style: normal;
+      color: var(--darker);
     }
     
     .activity-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
       margin-top: 30px;
     }
@@ -242,12 +302,12 @@
       border-radius: 10px;
       padding: 20px;
       border: 1px solid rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
     
-    .activity-card h4 {
-      color: var(--darker);
-      margin-bottom: 15px;
-      font-size: 1.3rem;
+    .activity-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
     
     .gallery {
@@ -263,6 +323,11 @@
       object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery img:hover {
+      transform: scale(1.03);
     }
     
     /* Certificazione Section */
@@ -271,6 +336,8 @@
       padding: 60px 20px;
       color: white;
       text-align: center;
+      border-radius: 12px;
+      margin: 40px 0;
     }
     
     .certification-container {
@@ -293,6 +360,11 @@
       width: 220px;
       backdrop-filter: blur(5px);
       border: 1px solid rgba(255,255,255,0.2);
+      transition: transform 0.3s ease;
+    }
+    
+    .step-card:hover {
+      transform: translateY(-10px);
     }
     
     .step-number {
@@ -315,51 +387,7 @@
       max-width: 700px;
       margin: 40px auto 0;
       box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    }
-    
-    .form-group {
-      margin-bottom: 20px;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-      color: var(--darker);
-    }
-    
-    .form-group input, 
-    .form-group textarea, 
-    .form-group select {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    
-    .submit-btn {
-      background: var(--accent);
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: var(--transition);
-      display: block;
-      margin: 20px auto 0;
-    }
-    
-    .submit-btn:hover {
-      background: #e06c00;
+      text-align: center;
     }
     
     /* Footer */
@@ -369,6 +397,8 @@
       padding: 4rem 2rem;
       text-align: center;
       position: relative;
+      border-radius: 12px 12px 0 0;
+      margin-top: 60px;
     }
     
     .footer::before {
@@ -444,6 +474,28 @@
       .borgo-title {
         font-size: 1.8rem;
       }
+      
+      .certification-steps {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .step-card {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .language-switcher {
+        position: relative;
+        top: 0;
+        right: 0;
+        justify-content: center;
+        margin-top: 15px;
+      }
+      
+      .logo-container {
+        flex-direction: column;
+      }
     }
     
     @media print {
@@ -494,17 +546,19 @@
   <section class="borgo-hero">
     <h1>Scopri i Borghi Certificati</h1>
     <p>Comunità sostenibili dove tradizione, natura e innovazione si incontrano</p>
+    <div style="margin-top: 30px;">
+      <a href="https://tizym.github.io/movere-in-salus/osservatorio.html" class="btn btn-accent">
+        <i class="fas fa-chart-line"></i> Visita l'Osservatorio
+      </a>
+      <a href="#certificazione" class="btn">
+        <i class="fas fa-certificate"></i> Richiedi Certificazione
+      </a>
+    </div>
   </section>
   
   <!-- Val di Merse Section -->
   <section id="val-di-merse" class="borgo-section">
-  <div class="borgo-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/TizyM/movere-in-salus/main/Palazzetto%20(SI).jpg') center/cover; padding: 80px 20px; color: white; text-align: center;">
-    <h1>Val di Merse, Toscana</h1>
-    <p style="font-size: 1.2rem;">Sede territoriale regionale a Palazzetto di Chiusdino</p>
-  </div>
-
-  <div class="borgo-container">
-
+    <div class="borgo-container">
       <div class="borgo-header">
         <h2 class="borgo-title">Val di Merse, Toscana</h2>
         <p class="borgo-subtitle">Sede territoriale regionale a Palazzetto di Chiusdino</p>
@@ -512,10 +566,16 @@
       
       <div class="borgo-content">
         <div class="borgo-story">
-          <h3>La Storia di Palazzetto</h3>
+          <h3 class="icon-title">
+            <i class="fas fa-book"></i>
+            <span>La Storia di Palazzetto</span>
+          </h3>
           <p>Piccola frazione di Chiusdino, Palazzetto è un gioiello medievale immerso nelle colline toscane. Con appena 230 abitanti, questo borgo custodisce tradizioni secolari e un patrimonio naturalistico di rara bellezza.</p>
           
-          <h3>Mestieri Tradizionali</h3>
+          <h3 class="icon-title">
+            <i class="fas fa-hands"></i>
+            <span>Mestieri Tradizionali</span>
+          </h3>
           <div class="testimonial">
             "Nella mia bottega a Palazzetto, vorrei insegnare ai giovani l'arte della lavorazione del legno come faceva mio padre."
             <div class="testimonial-author">- Paris, 75 anni, Maestro falegname</div>
@@ -524,11 +584,14 @@
           <p>Presso la istituenda bottega artigiana di Palazzetto, gli anziani maestri tramandano:</p>
           <ul style="padding-left: 20px; margin: 15px 0;">
             <li>Lavorazione del legno e intaglio tradizionale</li>
-            <li>Produzione di filamenti, moschettoni e attacchi per carrozze e cavalli </li>
+            <li>Produzione di filamenti, moschettoni e attacchi per carrozze e cavalli</li>
             <li>Restauro di oggetti antichi per trasformarli in oggetti di arredamento</li>
           </ul>
           
-          <h3>Erboristeria Locale</h3>
+          <h3 class="icon-title">
+            <i class="fas fa-leaf"></i>
+            <span>Erboristeria Locale</span>
+          </h3>
           <p>Guidati dalla nostra erborista Federica, scopriremo le erbe spontanee della zona:</p>
           <ul style="padding-left: 20px; margin: 15px 0;">
             <li><strong>Alloro:</strong> per infusi digestivi</li>
@@ -537,25 +600,36 @@
             <li><strong>Ortica:</strong> depurativa e ricostituente</li>
           </ul>
           
-          <h3>Esperienze nella Natura</h3>
+          <h3 class="icon-title">
+            <i class="fas fa-mountain"></i>
+            <span>Esperienze nella Natura</span>
+          </h3>
           <div class="activity-grid">
             <div class="activity-card">
-              <h4><i class="fas fa-hiking"></i> Escursioni nei Boschi</h4>
+              <h4 class="icon-title">
+                <i class="fas fa-hiking"></i>
+                <span>Escursioni nei Boschi</span>
+              </h4>
               <p>Percorsi guidati attraverso le foreste di faggi secolari e le sorgenti termali naturali</p>
             </div>
             
             <div class="activity-card">
-              <h4><i class="fas fa-bicycle"></i> Tour in Bicicletta</h4>
+              <h4 class="icon-title">
+                <i class="fas fa-bicycle"></i>
+                <span>Tour in Bicicletta</span>
+              </h4>
               <p>Itinerari cicloturistici lungo il fiume Merse con soste in aziende agricole locali</p>
             </div>
             
             <div class="activity-card">
-              <h4><i class="fas fa-utensils"></i> Degustazioni</h4>
+              <h4 class="icon-title">
+                <i class="fas fa-utensils"></i>
+                <span>Degustazioni</span>
+              </h4>
               <p>Pranzi contadini con prodotti a km0 e vini del territorio</p>
             </div>
           </div>
-          
-         
+        </div>
         
         <div class="borgo-highlights">
           <div class="highlight-item">
@@ -579,7 +653,7 @@
               <i class="fas fa-hands-helping"></i>
               <span>Coordinamento</span>
             </div>
-            <p>Prof.ssa Tiziana Mori - Responsabile Scientifico Territoriale, Marketin e comunicazione istituzionale</p>
+            <p>Prof.ssa Tiziana Mori - Responsabile Scientifico Territoriale, Marketing e Comunicazione Istituzionale</p>
           </div>
           
           <div class="highlight-item">
@@ -595,7 +669,9 @@
               <i class="fas fa-link"></i>
               <span>Link Utili</span>
             </div>
-            <p><a href="https://www.visittuscany.com/it/idee/le-ricchezze-della-val-di-merse-da-chiusdino-a-murlo/" style="color: var(--primary);">Grand Tour Val di Merse da Chiusdino a Murlo</a></p>
+            <a href="https://www.visittuscany.com/it/idee/le-ricchezze-della-val-di-merse-da-chiusdino-a-murlo/" class="btn btn-secondary" style="margin-top: 10px;">
+              <i class="fas fa-external-link-alt"></i> Grand Tour Val di Merse
+            </a>
           </div>
         </div>
       </div>
@@ -604,13 +680,7 @@
   
   <!-- Parteolla Section -->
   <section id="parteolla" class="borgo-section">
-  <div class="borgo-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/TizyM/movere-in-salus/main/Parteolla.jpg') center/cover; padding: 80px 20px; color: white; text-align: center;">
-    <h1>Parteolla, Sardegna</h1>
-    <p style="font-size: 1.2rem;">Terra di tradizioni millenarie nel cuore del Sud Sardegna</p>
-  </div>
-
-  <div class="borgo-container">
-
+    <div class="borgo-container">
       <div class="borgo-header">
         <h2 class="borgo-title">Parteolla, Sardegna</h2>
         <p class="borgo-subtitle">Terra di tradizioni millenarie nel cuore del Sud Sardegna</p>
@@ -618,10 +688,16 @@
       
       <div class="borgo-content">
         <div class="borgo-story">
-          <h3>Il Cuore della Sardegna</h3>
+          <h3 class="icon-title">
+            <i class="fas fa-book"></i>
+            <span>Il Cuore della Sardegna</span>
+          </h3>
           <p>Il Parteolla è una regione storica della Sardegna meridionale, caratterizzata da dolci colline ricoperte di uliveti secolari e vigneti. Un territorio dove il tempo sembra essersi fermato, custode di tradizioni antiche.</p>
           
-          <h3>Mestieri Tradizionali</h3>
+          <h3 class="icon-title">
+            <i class="fas fa-hands"></i>
+            <span>Mestieri Tradizionali</span>
+          </h3>
           <div class="testimonial">
             "Tessevo tappeti fin da bambina, oggi insegno questa arte alle giovani generazioni. Ogni nodo è un legame con le nostre radici."
             <div class="testimonial-author">- Maria, 78 anni, Maestra tessitrice</div>
@@ -635,25 +711,37 @@
             <li>Creazione di gioielli in filigrana</li>
           </ul>
           
-          <h3>Esperienze Autentiche</h3>
+          <h3 class="icon-title">
+            <i class="fas fa-mountain"></i>
+            <span>Esperienze Autentiche</span>
+          </h3>
           <div class="activity-grid">
             <div class="activity-card">
-              <h4><i class="fas fa-wine-bottle"></i> Percorsi Enogastronomici</h4>
+              <h4 class="icon-title">
+                <i class="fas fa-wine-bottle"></i>
+                <span>Percorsi Enogastronomici</span>
+              </h4>
               <p>Visite a cantine storiche e degustazioni di prodotti tipici, acccompagnati da intrattenimento musicale e teatrale</p>
             </div>
             
             <div class="activity-card">
-              <h4><i class="fas fa-hands"></i> Laboratori Artigianali</h4>
+              <h4 class="icon-title">
+                <i class="fas fa-hands"></i>
+                <span>Laboratori Artigianali</span>
+              </h4>
               <p>Corsi di tessitura e lavorazione del sughero</p>
             </div>
             
             <div class="activity-card">
-              <h4><i class="fas fa-mountain"></i> Trekking Culturali</h4>
+              <h4 class="icon-title">
+                <i class="fas fa-hiking"></i>
+                <span>Trekking Culturali</span>
+              </h4>
               <p>Cammini tra nuraghi, domus de janas e Chiese campestri</p>
             </div>
           </div>
-          
-                 
+        </div>
+        
         <div class="borgo-highlights">
           <div class="highlight-item">
             <div class="highlight-title">
@@ -684,7 +772,9 @@
               <i class="fas fa-link"></i>
               <span>Link Utili</span>
             </div>
-            <p><a href="https://www.unionecomuniparteolla.ca.it/" style="color: var(--primary);">Unione Comuni Parteolla</a></p>
+            <a href="https://www.unionecomuniparteolla.ca.it/" class="btn btn-secondary" style="margin-top: 10px;">
+              <i class="fas fa-external-link-alt"></i> Unione Comuni Parteolla
+            </a>
           </div>
         </div>
       </div>
@@ -723,28 +813,16 @@
         </div>
       </div>
       
-      <!-- Sezione Contatti -->
-<div class="contact-form">
-  <h3 style="text-align: center; margin-bottom: 20px; color: #1b5e20;">Contattaci</h3>
-  <div style="background: #fdfdfd; border: 2px dashed #2e7d32; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
-    <p style="font-size: 1.2rem; margin-bottom: 15px;">
-      <strong>📧 Email:</strong> 
-      <a href="mailto:movereinsalus.project@gmail.com" style="color: #006064; font-weight: bold;">
-        movereinsalus.project@gmail.com
-      </a>
-    </p>
-    <p style="font-size: 0.95rem; color: #555; line-height: 1.5; font-variant: small-caps;">
-      Nella tua email ti chiediamo di indicare: <br/>
-      - NOME E COGNOME<br/>
-      - RUOLO / ENTE<br/>
-      - BORGO O COMUNE DI INTERESSE<br/>
-      - TIPO DI RICHIESTA<br/>
-      - UN MESSAGGIO DESCRITTIVO<br/><br/>
-      Ti risponderemo entro 48 ore.
-    </p>
-  </div>
-</div>
-
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="mailto:movereinsalus.project@gmail.com" class="btn" style="font-size: 1.1rem;">
+          <i class="fas fa-envelope"></i> Richiedi informazioni
+        </a>
+        <a href="https://tizym.github.io/movere-in-salus/osservatorio.html" class="btn btn-accent" style="font-size: 1.1rem; margin-left: 15px;">
+          <i class="fas fa-chart-line"></i> Scopri l'Osservatorio
+        </a>
+      </div>
+    </div>
+  </section>
   
   <!-- Footer -->
   <footer class="footer">
@@ -765,45 +843,6 @@
         <p>Coordinamento Scientifico, Marketing e Partenariati: Prof.ssa Tiziana Mori e Team di ricerca "gruppo Movere in salus"</p>
         <p>Contatti esclusivi: movereinsalus.project@gmail.com</p>
       </div>
-
-      <!-- Navigation Section -->
-<section class="navigation-section">
-  <div class="main-container">
-    <div class="navigation-grid">
-      <div class="nav-card">
-        <a href="index.html">
-          <i class="fas fa-home"></i>
-          <h3>Home</h3>
-          <p>Torna alla pagina principale</p>
-        </a>
-      </div>
-      
-      <div class="nav-card">
-        <a href="servizi.html">
-          <i class="fas fa-concierge-bell"></i>
-          <h3>Servizi</h3>
-          <p>Scopri la nostra offerta</p>
-        </a>
-      </div>
-      
-      <div class="nav-card">
-        <a href="borghi.html">
-          <i class="fas fa-certificate"></i>
-          <h3>Borghi Certificati</h3>
-          <p>Consulta l'elenco completo</p>
-        </a>
-      </div>
-      
-      <div class="nav-card">
-        <a href="contatti.html">
-          <i class="fas fa-envelope"></i>
-          <h3>Contatti</h3>
-          <p>Richiedi informazioni</p>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
       
       <div class="copyright">
         <p>I contenuti di questa pagina sono protetti dalle leggi sul diritto d'autore e dalla normativa sulla proprietà intellettuale. Ogni violazione sarà perseguita a termini di legge.</p>
@@ -817,9 +856,9 @@
     
     window.addEventListener('scroll', () => {
       if (window.pageYOffset > 300) {
-        backToTopButton.classList.add('visible');
+        backToTopButton.style.display = "flex";
       } else {
-        backToTopButton.classList.remove('visible');
+        backToTopButton.style.display = "none";
       }
     });
     
@@ -833,16 +872,28 @@
     
     // Form submission
     const form = document.querySelector('form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Grazie per la tua richiesta! Sarai ricontattato entro 48 ore.');
-      form.reset();
-    });
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Grazie per la tua richiesta! Sarai ricontattato entro 48 ore.');
+        form.reset();
+      });
+    }
     
     // Language switcher (placeholder)
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         alert('Funzionalità di traduzione in fase di implementazione');
+      });
+    });
+    
+    // Card hover effects
+    document.querySelectorAll('.activity-card, .step-card, .borgo-container').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.zIndex = "10";
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.zIndex = "1";
       });
     });
   </script>
