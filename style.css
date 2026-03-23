@@ -937,3 +937,52 @@ section {
     padding: 30px 20px;
   }
 }
+/* === OTTIMIZZAZIONE DEEP TECH BOLOGNA === */
+
+/* Rende il box di Agrimotus più autoritario */
+.project-section {
+    border: 2px solid #2ecc71 !important;
+    box-shadow: 0 10px 30px rgba(46, 204, 113, 0.15) !important;
+}
+
+/* Effetto pulsante per i nomi del team */
+.team-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #eafaf1;
+    border-radius: 15px;
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 0.85em;
+    margin: 5px;
+}
+
+/* Animazione per il diagramma di Leonardo */
+.solution-node:hover {
+    transform: translateY(-5px);
+    background-color: #27ae60 !important;
+    color: white !important;
+    border-color: #1b5e20 !important;
+    transition: all 0.3s ease;
+}
+
+/* Bottone specifico per la Demo R2I */
+.demo-bologna-btn {
+    background: linear-gradient(135deg, #003366 0%, #0055a5 100%);
+    color: white !important;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 51, 102, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.demo-bologna-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.5);
+    background: #004080;
+}
