@@ -81,4 +81,12 @@ Copyright (C)
 For commercial use or partnerships:  
 - Email: movereinsalus.project@gmail.com 
  
+---
 
+## 🛡️ Proprietà Intellettuale & Governance
+Movere in Salus opera attraverso dipartimenti di ricerca specializzati per garantire l'eccellenza in ogni competizione:
+
+* **Team Cassini Hackathon 2025:** Tiziana Mori (Lead), Monica Fadda, Roberto Diana, Massimiliano Tronci.
+* **Team R&D Deep Tech (AGRImotus Bologna 2026):** Tiziana Mori (Science), Leonardo Tronci (AI Lead), Max Tronci (Compliance).
+
+Tutti i marchi, i loghi e i modelli scientifici (TAPTA, COSMOpet, AGRImotus) sono coperti da tutela intellettuale della Startup e degli autori citati nei rispettivi pitch.
